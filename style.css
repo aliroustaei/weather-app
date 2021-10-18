@@ -1,0 +1,261 @@
+@import url("https://v1.fontapi.ir/css/Shabnam:300;400;500;700");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Shabnam", sans-serif;
+  color: var(--colorTextWihte);
+}
+
+:root {
+  --colorPrimary: #5ea9dd;
+  --colorTextDark: #343a40;
+  --colorTextGray: #b7b7b7;
+  --colorTextWihte: #fdfdfd;
+}
+
+.app {
+  padding: 8rem 0;
+  min-height: 100vh;
+}
+
+.right-side {
+  background: linear-gradient(
+      170deg,
+      rgba(20, 137, 204, 0.8),
+      rgba(43, 50, 178, 0.8)
+    ),
+    url(./img/mountains.png) 50% no-repeat;
+  background-size: cover;
+  padding: 2rem;
+  border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25rem;
+  transform: translateZ(0) scale(1.02) perspective(1000px) rotateY(-10deg);
+  margin-left: -3rem;
+}
+
+.right-bot i {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.deg {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-left: -15px;
+}
+
+.right-bot p:nth-child(2) {
+  font-size: 4rem;
+  margin: 0;
+  line-height: 3.5rem;
+  font-weight: 700;
+}
+
+.right-bot p:nth-child(3) {
+  font-size: 1.5rem;
+  margin: 0;
+  line-height: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/*******--------- left side --------********/
+
+.left-side {
+  background-color: #222831;
+  padding: 2rem;
+  border-radius: 2.5rem;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-top {
+  width: 100%;
+}
+
+.wether-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.wether-info:last-child p {
+  margin-bottom: 0;
+}
+
+.wether-info p {
+  margin-bottom: 8px;
+}
+
+.wether-info p:last-child {
+  color: var(--colorTextGray);
+}
+
+.speed {
+  direction: ltr;
+}
+
+.middle-box {
+  display: flex;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.middle-box-info {
+  background-color: #222831;
+  border-radius: 10px;
+  padding: 0.8rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 200ms ease;
+}
+
+.middle-box-info:hover {
+  background: #fdfdfd;
+  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1);
+}
+
+.middle-box-info:hover p,
+.middle-box-info:hover i {
+  color: #222831;
+  font-weight: 500;
+}
+
+.middle-box-info.active {
+  background: #fdfdfd;
+  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+}
+
+.middle-box-info.active p,
+.middle-box-info.active i {
+  color: #222831;
+  font-weight: 500;
+}
+
+.middle-box-info p {
+  margin-bottom: 0;
+  font-size: 00.8rem;
+}
+
+.btn-box .btn1 {
+  background: linear-gradient(170deg, rgba(20, 137, 204), rgba(43, 50, 178));
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 0.8rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-box .btn1:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fdfdfd;
+  clip-path: circle(0 at center);
+  transition: 0.4s linear;
+  z-index: -1;
+}
+
+.btn-box .btn1:hover::before {
+  clip-path: circle(10rem at center);
+}
+
+.btn-box .btn1:hover,
+.btn-box .btn1:hover i {
+  color: #222831;
+  font-weight: 500;
+}
+
+.btn-box .btn1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(39, 39, 39);
+  opacity: 0.1;
+  clip-path: circle(0 at center);
+  transition: 0.3s ease-out;
+}
+
+.btn-box .btn1:active:after {
+  clip-path: circle(100px at center);
+}
+
+form {
+  display: none;
+  gap: 8px;
+}
+
+form.show {
+  display: flex;
+}
+
+form input {
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  color: #222831;
+  padding: 0.3rem 0.8rem;
+}
+
+.btn-box .btn2 {
+  background: transparent;
+  border: none;
+}
+
+.btn-box .btn2:active {
+  transform: scale(1.1);
+}
+
+/*-------- alert -----------*/
+
+.alert-success {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  visibility: visible;
+  opacity: 1;
+  transition: ease-out 0.3s;
+}
+
+.alert-hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.alert-success strong {
+  color: unset;
+}
+
+@media only screen and (max-width: 568px) {
+  .alert-success {
+    right: 0;
+  }
+
+  .right-side {
+    transform: translateZ(0) scale(1) perspective(1000px) rotateX(-10deg);
+    margin-left: 0rem;
+    margin-bottom: -1.1rem;
+  }
+}

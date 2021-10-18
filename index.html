@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ir-fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!------ fav icon ------>
+    <link rel="shortcut icon" href="img/sun_icon.svg" type="image/x-icon">
+    <!------ icon-weather ------>
+    <link
+      rel="stylesheet"
+      href="weather-icons-master/css/weather-icons.min.css"
+    />
+    <!----- bootstrap icon----->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+    />
+    <!--------- bootstrap ---------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css"
+    />
+    <!------- css ---------->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="app">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 col-md-4">
+            <div class="right-side shadow-lg">
+              <div class="right-top">
+                <h4>دوشنبه</h4>
+                <p>12 مهر 1400</p>
+                <p><i class="bi bi-geo-alt"></i> تهران</p>
+              </div>
+              <div class="right-bot">
+                <i class="bi bi-brightness-high"></i>
+                <p>29 <small class="deg">&#x2103</small></p>
+                <p>آرام</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="left-side">
+              <div class="left-top">
+                <div class="top-box">
+                  <div class="wether-info">
+                    <p>حداقل دما</p>
+                    <p>23</p>
+                  </div>
+                  <div class="wether-info">
+                    <p>حداکثر دما</p>
+                    <p>23</p>
+                  </div>
+                  <div class="wether-info">
+                    <p>سرعت باد</p>
+                    <p class="speed">23</p>
+                  </div>
+                </div>
+              </div>
+              <div class="middle-box">
+                <div class="middle-box-info active">
+                  <i class="bi bi-brightness-high"></i>
+                  <p>چهارشنبه</p>
+                  <p>29 c</p>
+                </div>
+                <div class="middle-box-info">
+                  <i class="bi bi-brightness-high"></i>
+                  <p>چهارشنبه</p>
+                  <p>29 c</p>
+                </div>
+                <div class="middle-box-info">
+                  <i class="bi bi-brightness-high"></i>
+                  <p>چهارشنبه</p>
+                  <p>29 c</p>
+                </div>
+                <div class="middle-box-info">
+                  <i class="bi bi-brightness-high"></i>
+                  <p>چهارشنبه</p>
+                  <p>29 c</p>
+                </div>
+              </div>
+              <div class="btn-box text-center w-75">
+                <button type="button" class="btn1">
+                  <i class="bi bi-geo-alt"></i>
+                  تغییر شهر
+                </button>
+                <form>
+                  <button type="submit" class="btn2">
+                    <i class="bi bi-search"></i>
+                  </button>
+                  <input type="text" placeholder="نام شهر" name="city"/>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----- alert ---------->
+
+    <div class="alert alert-success alert-hide" role="alert">
+        لطفا VPN خود را خاموش کنید و نام <strong>مراکز استان</strong> ایران را وارد کنید
+    </div>
+  </body>
+  <script src="jalali.js"></script>
+  <script src="index.js"></script>
+</html>
